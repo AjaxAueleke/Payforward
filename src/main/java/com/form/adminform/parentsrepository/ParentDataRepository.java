@@ -20,6 +20,7 @@ public interface ParentDataRepository extends JpaRepository<ParentData, Long> {
     @Query
     List<ParentData> findByLname(String name);
 
+
 //    @Query("FROM parental WHERE UPPER(fname) LIKE %?#{[0].toUpperCase()}% OR UPPER(mname) LIKE %?#{[0].toUpperCase()}% OR UPPER(lname) LIKE %?#{[0].toUpperCase()}%")
 //    List<ParentData> findByName(String name);
 

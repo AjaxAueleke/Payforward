@@ -11,8 +11,8 @@ import java.util.Date;
 @Table(name = "enrollment")
 public class EnrollmentStatus {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Enrollment_id;
-    private Long studentid;
+    private Long id;
+    private Long studentId;
     private String sundaySchool;
     private double tuitionFee;
     private String academicYear;
@@ -22,33 +22,20 @@ public class EnrollmentStatus {
     @Temporal(TemporalType.TIMESTAMP)
     private Date lastModifiedOn;
 
-    public EnrollmentStatus() {
-        //Default Constructor : To avoid errors
-    }
-
-    public EnrollmentStatus(Long studentid, String sundaySchool, double tuitionFee, String academicYear, boolean tuitionAndFeePaid) {
-        this.studentid = studentid;
+    public EnrollmentStatus(Long studentId, String sundaySchool, double tuitionFee, String academicYear, boolean tuitionAndFeePaid) {
+        this.studentId = studentId;
         this.sundaySchool = sundaySchool;
         this.tuitionFee = tuitionFee;
         this.academicYear = academicYear;
         this.tuitionAndFeePaid = tuitionAndFeePaid;
     }
 
-
-    public Long getEnrollment_id() {
-        return Enrollment_id;
+    public Long getStudentId() {
+        return studentId;
     }
 
-    public void setEnrollment_id(Long enrollment_id) {
-        Enrollment_id = enrollment_id;
-    }
-
-    public Long getStudentid() {
-        return studentid;
-    }
-
-    public void setStudentid(Long studentid) {
-        this.studentid = studentid;
+    public void setStudentId(Long studentId) {
+        this.studentId = studentId;
     }
 
     public String getSundaySchool() {
