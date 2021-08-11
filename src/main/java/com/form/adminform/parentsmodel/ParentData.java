@@ -136,4 +136,22 @@ public class ParentData {
     public void setSms(boolean sms) {
         this.sms = sms;
     }
+
+    @Override
+    public String toString() {
+        return "ParentData{" +
+                "id=" + id +
+                ", fname='" + fname + '\'' +
+                ", mname='" + mname + '\'' +
+                ", lname='" + lname + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip='" + zip + '\'' +
+                ", phone1='" + phone1 + '\'' +
+                ", phone2='" + phone2 + '\'' +
+                ", email='" + email + '\'' +
+                ", sms=" + sms +
+                '}';
+    }
 }

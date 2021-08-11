@@ -165,4 +165,26 @@ public class StaffData {
     public void setSpecialNote(String specialNote) {
         this.specialNote = specialNote;
     }
+
+    @Override
+    public String toString() {
+        return "StaffData{" +
+                "id=" + id +
+                ", firstname='" + firstname + '\'' +
+                ", middlename='" + middlename + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", gender='" + gender + '\'' +
+                ", email='" + email + '\'' +
+                ", phone1='" + phone1 + '\'' +
+                ", phone2='" + phone2 + '\'' +
+                ", phone3='" + phone3 + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip='" + zip + '\'' +
+                ", specialNote='" + specialNote + '\'' +
+                '}';
+    }
+
 }
