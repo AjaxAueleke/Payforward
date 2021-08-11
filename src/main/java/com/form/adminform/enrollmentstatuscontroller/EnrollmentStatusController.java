@@ -1,16 +1,16 @@
 package com.form.adminform.enrollmentstatuscontroller;
 
 
-import com.form.adminform.enrollmentstatus.EnrollmentStatus;
-import com.form.adminform.enrollmentstatusrepository.EnrollmentStatusRepository;
-import com.form.adminform.exceptions.DuplicateRecord;
-import com.form.adminform.exceptions.IdNotFound;
-import com.form.adminform.parentsmodel.ParentData;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+    import com.form.adminform.enrollmentstatus.EnrollmentStatus;
+    import com.form.adminform.enrollmentstatusrepository.EnrollmentStatusRepository;
+    import com.form.adminform.exceptions.DuplicateRecord;
+    import com.form.adminform.exceptions.IdNotFound;
+    import com.form.adminform.parentsmodel.ParentData;
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.http.ResponseEntity;
+    import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+    import java.util.List;
 
 @CrossOrigin
 @RestController
@@ -32,6 +32,7 @@ public class EnrollmentStatusController {
         EnrollmentStatus newEnrollment = enrollmentStatusRepository.findByStudentId(studentId);
         newEnrollment.setAcademicYear(e.getAcademicYear());
         newEnrollment.setSundaySchool(e.getSundaySchool());
+        newEnrollment.setTuitionFee(e.getTuitionFee());
         newEnrollment.setTuitionAndFeePaid(e.isTuitionAndFeePaid());
         return enrollmentStatusRepository.save(newEnrollment);
     }

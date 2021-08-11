@@ -29,32 +29,55 @@ public class StudentData {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate dateOfBirth;
     private String address;
+    private String city;
+    private String state;
+    private String zip;
     private String email;
     private String phone1;
     private String phone2;
     private String specialNote;
 
-    public StudentData(String fname,
-                       String mname,
-                       String lname,
-                       LocalDate dateOfBirth,
-                       String address,
-                       String email,
-                       String phone1,
-                       String phone2,
-                       String specialNote) {
+    public StudentData(String fname, String mname, String lname, LocalDate dateOfBirth, String address, String city, String state, String zip, String email, String phone1, String phone2, String specialNote) {
         this.fname = fname;
         this.mname = mname;
         this.lname = lname;
         this.dateOfBirth = dateOfBirth;
         this.address = address;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
         this.email = email;
         this.phone1 = phone1;
         this.phone2 = phone2;
         this.specialNote = specialNote;
     }
-    StudentData() {
+
+    public StudentData() {
         //DefaultConstructor : Some methods require the default constructor
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getZip() {
+        return zip;
+    }
+
+    public void setZip(String zip) {
+        this.zip = zip;
     }
 
     public Long getId() {

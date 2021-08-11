@@ -15,24 +15,56 @@ public class ParentData {
     private String mname;
     private String lname;
     private String address;
+    private String city;
+    private String state;
+    private String zip;
     private String phone1;
     private String phone2;
     private String email;
     private boolean sms;
 
-    public ParentData(String fname, String mname, String lname, String address, String phone1, String phone2, String email, boolean sms) {
+    public ParentData(String fname, String mname, String lname, String address, String city, String state, String zip, String phone1, String phone2, String email, boolean sms) {
         this.fname = fname;
         this.mname = mname;
         this.lname = lname;
         this.address = address;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
         this.phone1 = phone1;
         this.phone2 = phone2;
         this.email = email;
         this.sms = sms;
     }
+
     public ParentData() {
         //Default constuctor for errors
     }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getZip() {
+        return zip;
+    }
+
+    public void setZip(String zip) {
+        this.zip = zip;
+    }
+
     public Long getId() {
         return id;
     }

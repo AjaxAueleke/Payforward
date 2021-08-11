@@ -3,6 +3,7 @@ package com.form.adminform.studentcontroller;
 
 import com.form.adminform.exceptions.DuplicateRecord;
 import com.form.adminform.exceptions.IdNotFound;
+import com.form.adminform.parentsmodel.ParentData;
 import com.form.adminform.studentmodel.StudentData;
 import com.form.adminform.studentsrepository.StudentsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,10 +24,12 @@ public class StudentController {
     }
     @PostMapping("/api/students")
     public StudentData saveStudent(StudentData s) {
-        if (studentsRepository.findByEmail(s.getEmail()).size() == 0) {
-           return studentsRepository.save(s);
+        List<StudentData> emailCheck = studentsRepository.findByEmail(s.getEmail());
+        if (!(emailCheck.size() == 0)) {
+            throw new DuplicateRecord();
         }
-        throw new DuplicateRecord();
+        System.out.println(emailCheck);
+        return studentsRepository.save(s);
     }
     @GetMapping("/api/students/{name}")
     public List<StudentData> getStudentByName(@PathVariable(value = "name") String name) {

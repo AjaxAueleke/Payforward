@@ -3,11 +3,13 @@ package com.form.adminform.parentsrepository;
 import com.form.adminform.parentsmodel.ParentData;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
+@EnableJpaAuditing
 public interface ParentDataRepository extends JpaRepository<ParentData, Long> {
 
 //    @Query("select u from parental WHERE parental.email =?1")

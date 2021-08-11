@@ -22,12 +22,25 @@ public class EnrollmentStatus {
     @Temporal(TemporalType.TIMESTAMP)
     private Date lastModifiedOn;
 
+
+    public EnrollmentStatus() {
+        //Default Constructor
+
+    }
     public EnrollmentStatus(Long studentId, String sundaySchool, double tuitionFee, String academicYear, boolean tuitionAndFeePaid) {
         this.studentId = studentId;
         this.sundaySchool = sundaySchool;
         this.tuitionFee = tuitionFee;
         this.academicYear = academicYear;
         this.tuitionAndFeePaid = tuitionAndFeePaid;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Long getStudentId() {
